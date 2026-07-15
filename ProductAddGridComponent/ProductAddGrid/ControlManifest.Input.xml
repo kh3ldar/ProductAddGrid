@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="eMind" constructor="ProductAddGridComponent" version="1.0.600" display-name-key="ProductAddGridComponent" description-key="Configurable PCF control for adding products to opportunities, quotes, and custom entities" control-type="virtual" >
+
+    <external-service-usage enabled="false">
+    </external-service-usage>
+    <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
+    <property name="parentEntityName" display-name-key="Parent Entity Name" description-key="The logical name of the parent entity (e.g., opportunity, quote)" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="parentRecordId" display-name-key="Parent Record ID" description-key="The GUID of the parent record. May include variant key encoded as guid|variantKey for entities with multiple modes." of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="displayMode" display-name-key="Display Mode" description-key="Display mode: auto, modal, or fullscreen" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="dataOutput" display-name-key="Data Output" description-key="JSON output of staged product lines" of-type="Multiple" usage="output" />
+    <!-- dialogAction output: Set to close after successful save. Custom Page should bind OnChange to call Back() when this equals close -->
+    <property name="dialogAction" display-name-key="Dialog Action" description-key="Dialog close signal - set to close after save" of-type="SingleLine.Text" usage="output" />
+    <resources>
+      <code path="index.ts" order="1"/>
+      <platform-library name="React" version="16.14.0" />
+      <platform-library name="Fluent" version="8.120.0" />
+    <css path="css/ProductAddGrid.css" order="1" />
+    <resx path="strings/ProductAddGrid.1033.resx" version="1.0.263" />
+    <resx path="strings/ProductAddGrid.1055.resx" version="1.0.263" />
+    </resources>
+    <feature-usage>
+      <uses-feature name="WebAPI" required="true" />
+    </feature-usage>
+  </control>
+</manifest>

@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  
+  <!-- Search and Navigation -->
+  <data name="search.placeholder" xml:space="preserve">
+    <value>Search products...</value>
+  </data>
+  <data name="placeholder.selectOption" xml:space="preserve">
+    <value>---</value>
+  </data>
+  
+  <!-- Actions -->
+  <data name="actions.add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="actions.editDetails" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="actions.saveAll" xml:space="preserve">
+    <value>Save All</value>
+  </data>
+  <data name="actions.clearStaging" xml:space="preserve">
+    <value>Clear Staging</value>
+  </data>
+  <data name="actions.remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="actions.addRow" xml:space="preserve">
+    <value>Add Row</value>
+  </data>
+  <data name="actions.stage" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="actions.update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="actions.removeRow" xml:space="preserve">
+    <value>Remove Row</value>
+  </data>
+  <data name="actions.submitRequests" xml:space="preserve">
+    <value>Submit Requests</value>
+  </data>
+  <data name="actions.cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  
+  <!-- Confirmation Messages -->
+  <data name="confirm.clearStaging.message" xml:space="preserve">
+    <value>Are you sure you want to clear all staged products? This action cannot be undone.</value>
+  </data>
+  
+  <!-- Toast Messages -->
+  <data name="toast.addedToStaging" xml:space="preserve">
+    <value>Product added to staging area</value>
+  </data>
+  <data name="toast.requestSubmitted" xml:space="preserve">
+    <value>Product requests submitted successfully</value>
+  </data>
+  <data name="toast.savedSuccess" xml:space="preserve">
+    <value>All products saved successfully</value>
+  </data>
+  <data name="toast.savedError" xml:space="preserve">
+    <value>Error saving products. Please try again.</value>
+  </data>
+  <data name="toast.removedFromStaging" xml:space="preserve">
+    <value>Product removed from staging</value>
+  </data>
+  <data name="toast.stagingCleared" xml:space="preserve">
+    <value>Staging area cleared</value>
+  </data>
+  <data name="toast.validationError" xml:space="preserve">
+    <value>Please fix validation errors before saving</value>
+  </data>
+  <data name="toast.stockQuantityExceeded" xml:space="preserve">
+    <value>{0} has its quantity changed before save. Please adjust its quantity.</value>
+  </data>
+  <data name="toast.dismiss" xml:space="preserve">
+    <value>Dismiss</value>
+  </data>
+  <data name="toast.maxLengthExceeded" xml:space="preserve">
+    <value>"{0}" exceeds the maximum length of {1} characters</value>
+  </data>
+  
+  <!-- Validation Messages -->
+  <data name="msg.validation.required" xml:space="preserve">
+    <value>This field is required</value>
+  </data>
+  <data name="msg.validation.requiredFields" xml:space="preserve">
+    <value>Please fill in required fields: {0}</value>
+  </data>
+  <data name="msg.validation.invalidNumber" xml:space="preserve">
+    <value>Please enter a valid number</value>
+  </data>
+  <data name="msg.validation.invalidCurrency" xml:space="preserve">
+    <value>Please enter a valid currency amount</value>
+  </data>
+  <data name="msg.validation.stockExceeded" xml:space="preserve">
+    <value>Quantity exceeds available stock</value>
+  </data>
+  
+  <!-- Error Messages -->
+  <data name="error.configuration" xml:space="preserve">
+    <value>Configuration error</value>
+  </data>
+  <data name="error.configNotAvailable" xml:space="preserve">
+    <value>Entity configuration or parent record not available</value>
+  </data>
+  
+  <!-- Paging -->
+  <data name="paging.showing" xml:space="preserve">
+    <value>Showing {0} to {1} of {2} products</value>
+  </data>
+  <data name="paging.previous" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="paging.next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  
+  <!-- General -->
+  <data name="ProductAddGridComponent" xml:space="preserve">
+    <value>ProductAddGridComponent</value>
+  </data>
+  <data name="general.loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="general.saving" xml:space="preserve">
+    <value>Saving...</value>
+  </data>
+  <data name="general.noResults" xml:space="preserve">
+    <value>No products found</value>
+  </data>
+  <data name="general.staging" xml:space="preserve">
+    <value>Staging ({0} items)</value>
+  </data>
+    <!-- Column Headers -->
+    <data name="col.crcad_productcode_ex" xml:space="preserve">
+      <value>Product Code</value>
+    </data>
+    <data name="col.name" xml:space="preserve">
+      <value>Name</value>
+    </data>
+    <data name="col.product" xml:space="preserve">
+      <value>Product</value>
+    </data>
+  
+  <!-- Product Filters -->
+  <data name="filter.allProducts" xml:space="preserve">
+    <value>All Products</value>
+  </data>
+  <data name="filter.availableStock" xml:space="preserve">
+    <value>Available Stock</value>
+  </data>
+  <data name="filter.inStock" xml:space="preserve">
+    <value>Products In Stock</value>
+  </data>
+  <data name="filter.software" xml:space="preserve">
+    <value>Software</value>
+  </data>
+  <data name="filter.hardware" xml:space="preserve">
+    <value>Hardware</value>
+  </data>
+  <data name="filter.outlet" xml:space="preserve">
+    <value>Outlet</value>
+  </data>
+  <data name="filter.excludeAdobe" xml:space="preserve">
+    <value>Exclude Adobe</value>
+  </data>
+<data name="filter.apple" xml:space="preserve">
+    <value>Apple</value>
+</data>
+<data name="filter.subFilter.iPad" xml:space="preserve">
+    <value>iPad</value>
+</data>
+<data name="filter.subFilter.iPhone" xml:space="preserve">
+    <value>iPhone</value>
+</data>
+<data name="filter.subFilter.Mac" xml:space="preserve">
+    <value>Mac</value>
+</data>
+<data name="filter.subFilter.placeholder" xml:space="preserve">
+    <value>All</value>
+</data>
+<data name="filter.subFilter.ariaLabel" xml:space="preserve">
+    <value>Sub-filter</value>
+</data>
+<data name="filter.adobe" xml:space="preserve">
+    <value>Adobe</value>
+</data>
+<data name="filter.ariaLabel" xml:space="preserve">
+    <value>Product filter</value>
+</data>
+
+  
+  <!-- Staging Toggle -->
+  <data name="staging.showStagedOnly" xml:space="preserve">
+    <value>Show staged only</value>
+  </data>
+  <data name="staging.showAllProducts" xml:space="preserve">
+    <value>Show all products</value>
+  </data>
+  
+  <!-- Tabs -->
+  <data name="tabs.catalogProducts" xml:space="preserve">
+    <value>Catalog Products</value>
+  </data>
+  <data name="tabs.writeInProducts" xml:space="preserve">
+    <value>Write-In Products</value>
+  </data>
+  
+  <!-- Write-In -->
+  <data name="writeIn.emptyGrid" xml:space="preserve">
+    <value>Click 'Add Row' to add a write-in product</value>
+  </data>
+  <data name="col.productDescription" xml:space="preserve">
+    <value>Product Description</value>
+  </data>
+  
+  <!-- Product Requests Tab -->
+  <data name="tabs.productRequests" xml:space="preserve">
+    <value>Product Requests</value>
+  </data>
+  <data name="col.requestType" xml:space="preserve">
+    <value>Request Type</value>
+  </data>
+  <data name="opt.priceRequest" xml:space="preserve">
+    <value>Price Request</value>
+  </data>
+  <data name="opt.acquisitionRequest" xml:space="preserve">
+    <value>Acquisition Request</value>
+  </data>
+  <data name="lbl.writeInProducts" xml:space="preserve">
+    <value>Write-In Products</value>
+  </data>
+  <data name="lbl.catalogProducts" xml:space="preserve">
+    <value>Catalog Products</value>
+  </data>
+  <data name="productRequest.noCatalogProducts" xml:space="preserve">
+    <value>Search for products to add to your request</value>
+  </data>
+  <data name="productRequest.stagedCatalogProducts" xml:space="preserve">
+    <value>Products Added to Request</value>
+  </data>
+  <data name="toast.requestAlreadyExists" xml:space="preserve">
+    <value>Selected products already exist in an active request.</value>
+  </data>
+  <data name="toast.requestCreated" xml:space="preserve">
+    <value>Product request created successfully.</value>
+  </data>
+  <data name="toast.requestUpdated" xml:space="preserve">
+    <value>Products added to existing request.</value>
+  </data>
+  <data name="toast.requestApiError" xml:space="preserve">
+    <value>Warning: Product request API call failed, but products were saved.</value>
+  </data>
+  <data name="msg.noProductsFound" xml:space="preserve">
+    <value>No products found matching your search.</value>
+  </data>
+  <data name="productRequest.searchCatalog" xml:space="preserve">
+    <value>Search Catalog Products</value>
+  </data>
+  <data name="productRequest.manualEntry" xml:space="preserve">
+    <value>Manual Product Entry</value>
+  </data>
+  <data name="col.availableStock" xml:space="preserve">
+    <value>Available Stock</value>
+  </data>
+  <data name="col.centralWarehouseStock" xml:space="preserve">
+    <value>Central Warehouse Stock</value>
+  </data>
+  <data name="col.reservedQuantity" xml:space="preserve">
+    <value>Reserved Quantity</value>
+  </data>
+  <data name="col.onlineWarehouseStock" xml:space="preserve">
+    <value>Online Warehouse Stock</value>
+  </data>
+  
+  <!-- Staging Persistence -->
+  <data name="staging.restored" xml:space="preserve">
+    <value>Restored {0} staged products from previous session</value>
+  </data>
+  <data name="staging.priceRequestRestored" xml:space="preserve">
+    <value>Restored {0} price request items from previous session</value>
+  </data>
+  <data name="staging.restoredWithAdjustments" xml:space="preserve">
+    <value>Restored staging. {0} product quantities reduced due to stock changes.</value>
+  </data>
+  <data name="staging.restoredWithRemovals" xml:space="preserve">
+    <value>Restored staging. {0} products removed - no longer available.</value>
+  </data>
+  <data name="staging.restoredWithBoth" xml:space="preserve">
+    <value>Restored staging. {0} quantities adjusted, {1} products removed due to stock changes.</value>
+  </data>
+  <data name="staging.allInvalid" xml:space="preserve">
+    <value>Previous staging cleared - products no longer available.</value>
+  </data>
+  
+  <!-- Conditional Fields Panel -->
+  <data name="panel.conditionalFields.title" xml:space="preserve">
+    <value>Additional Information Required</value>
+  </data>
+  <data name="panel.conditionalFields.description" xml:space="preserve">
+    <value>Please provide the following information for this product:</value>
+  </data>
+  <data name="actions.saveAndStage" xml:space="preserve">
+    <value>Save &amp; Stage</value>
+  </data>
+  <data name="status.loadingMetadata" xml:space="preserve">
+    <value>Loading field information...</value>
+  </data>
+  <data name="field.existingCustomer" xml:space="preserve">
+    <value>Existing Customer</value>
+  </data>
+  <data name="field.licenseDuration" xml:space="preserve">
+    <value>License Duration (Days)</value>
+  </data>
+  <data name="field.projectCode" xml:space="preserve">
+    <value>Project Code</value>
+  </data>
+  <!-- Global Notifications (for JS bridge) -->
+  <data name="notification.savedSuccess" xml:space="preserve">
+    <value>{0} product(s) saved successfully.</value>
+  </data>
+  <data name="notification.duplicatesSkipped" xml:space="preserve">
+    <value>{0} product(s) were skipped because they already exist on this record.</value>
+  </data>
+  <data name="notification.savedError" xml:space="preserve">
+    <value>An error occurred while saving products. {0}</value>
+  </data>
+  <data name="notification.requestSubmitted" xml:space="preserve">
+    <value>Product request submitted successfully.</value>
+  </data>
+  <data name="notification.requestApiError" xml:space="preserve">
+    <value>Product request created but Custom API execution failed.</value>
+  </data>
+  <data name="notification.customApiMessage" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+</root>

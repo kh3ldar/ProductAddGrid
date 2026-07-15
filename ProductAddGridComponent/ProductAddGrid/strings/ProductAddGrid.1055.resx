@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  
+  <!-- Search and Navigation -->
+  <data name="search.placeholder" xml:space="preserve">
+    <value>Ürün ara...</value>
+  </data>
+  <data name="placeholder.selectOption" xml:space="preserve">
+    <value>---</value>
+  </data>
+  
+  <!-- Actions -->
+  <data name="actions.add" xml:space="preserve">
+    <value>Ekle</value>
+  </data>
+  <data name="actions.editDetails" xml:space="preserve">
+    <value>Düzenle</value>
+  </data>
+  <data name="actions.saveAll" xml:space="preserve">
+    <value>Tümünü Kaydet</value>
+  </data>
+  <data name="actions.clearStaging" xml:space="preserve">
+    <value>Bütün Ürünleri Kaldır</value>
+  </data>
+  <data name="actions.remove" xml:space="preserve">
+    <value>Kaldır</value>
+  </data>
+  <data name="actions.addRow" xml:space="preserve">
+    <value>Satır Ekle</value>
+  </data>
+  <data name="actions.stage" xml:space="preserve">
+    <value>Ekle</value>
+  </data>
+  <data name="actions.update" xml:space="preserve">
+    <value>Güncelle</value>
+  </data>
+  <data name="actions.removeRow" xml:space="preserve">
+    <value>Ürünü Sil</value>
+  </data>
+  <data name="actions.submitRequests" xml:space="preserve">
+    <value>Talep Gönder</value>
+  </data>
+  <data name="actions.cancel" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+  
+  <!-- Confirmation Messages -->
+  <data name="confirm.clearStaging.message" xml:space="preserve">
+    <value>Eklenen tüm ürünleri silmek istediğinizden emin misiniz?</value>
+  </data>
+  
+  <!-- Toast Messages -->
+  <data name="toast.addedToStaging" xml:space="preserve">
+    <value>Ürün eklendi</value>
+  </data>
+  <data name="toast.requestSubmitted" xml:space="preserve">
+    <value>Ürün talepleri başarıyla gönderildi</value>
+  </data>
+  <data name="toast.savedSuccess" xml:space="preserve">
+    <value>Tüm ürünler başarıyla kaydedildi</value>
+  </data>
+  <data name="toast.savedError" xml:space="preserve">
+    <value>Ürünleri kaydederken hata oluştu. Lütfen tekrar deneyin.</value>
+  </data>
+  <data name="toast.removedFromStaging" xml:space="preserve">
+    <value>Ürün kaldırıldı</value>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  </data>
+  <data name="toast.stagingCleared" xml:space="preserve">
+    <value>Ürünler kaldırıldı</value>
+  </data>
+  <data name="toast.validationError" xml:space="preserve">
+    <value>Kaydetmeden önce gerekli alanları doldurun</value>
+  </data>
+  <data name="toast.stockQuantityExceeded" xml:space="preserve">
+    <value>{0} kodlu ürünün stok adeti kaydetmeden önce değişti. Lütfen kontrol edin.</value>
+  </data>
+  <data name="toast.dismiss" xml:space="preserve">
+    <value>Kapat</value>
+  </data>
+  <data name="toast.maxLengthExceeded" xml:space="preserve">
+    <value>"{0}" alanı maksimum {1} karakter uzunluğunu aşıyor</value>
+  </data>
+  
+  <!-- Column Headers -->
+  <data name="col.productnumber" xml:space="preserve">
+    <value>Ürün Numarası</value>
+  </data>
+  <data name="col.productcode" xml:space="preserve">
+    <value>Ürün Kodu</value>
+  </data>
+  <data name="col.crcad_productcode_ex" xml:space="preserve">
+    <value>Ürün Kodu</value>
+  </data>
+  <data name="col.name" xml:space="preserve">
+    <value>Ad</value>
+  </data>
+  <data name="col.product" xml:space="preserve">
+    <value>Ürün</value>
+  </data>
+  <data name="col.standardcost" xml:space="preserve">
+    <value>Standart Maliyet</value>
+  </data>
+  <data name="col.currentcost" xml:space="preserve">
+    <value>Mevcut Maliyet</value>
+  </data>
+  <data name="col.description" xml:space="preserve">
+    <value>Açıklama</value>
+  </data>
+  <data name="col.quantity" xml:space="preserve">
+    <value>Adet</value>
+  </data>
+  <data name="col.unitprice" xml:space="preserve">
+    <value>Birim Fiyat</value>
+  </data>
+  <data name="col.extendedamount" xml:space="preserve">
+    <value>Toplam Tutar</value>
+  </data>
+  
+  <!-- Validation Messages -->
+  <data name="msg.validation.required" xml:space="preserve">
+    <value>Bu alan zorunludur</value>
+  </data>
+  <data name="msg.validation.requiredFields" xml:space="preserve">
+    <value>Lütfen zorunlu alanları doldurun: {0}</value>
+  </data>
+  <data name="msg.validation.invalidNumber" xml:space="preserve">
+    <value>Lütfen geçerli bir sayı girin</value>
+  </data>
+  <data name="msg.validation.invalidCurrency" xml:space="preserve">
+    <value>Lütfen geçerli bir tutar girin</value>
+  </data>
+  <data name="msg.validation.stockExceeded" xml:space="preserve">
+    <value>Miktar mevcut stoku aşıyor</value>
+  </data>
+  
+  <!-- Error Messages -->
+  <data name="error.configuration" xml:space="preserve">
+    <value>Yapılandırma hatası</value>
+  </data>
+  <data name="error.configNotAvailable" xml:space="preserve">
+    <value>Varlık yapılandırması veya üst kayıt kullanılamıyor</value>
+  </data>
+  <data name="msg.validation.invalidCurrency" xml:space="preserve">
+    <value>Lütfen geçerli bir para birimi tutarı girin</value>
+  </data>
+  <data name="msg.validation.stockExceeded" xml:space="preserve">
+    <value>Girilen adet mevcut stoktan fazla</value>
+  </data>
+  
+  <!-- Paging -->
+  <data name="paging.showing" xml:space="preserve">
+    <value>{2} üründen {0} ile {1} arası gösteriliyor</value>
+  </data>
+  <data name="paging.previous" xml:space="preserve">
+    <value>Önceki</value>
+  </data>
+  <data name="paging.next" xml:space="preserve">
+    <value>Sonraki</value>
+  </data>
+  
+  <!-- General -->
+  <data name="ProductAddGridComponent" xml:space="preserve">
+    <value>ProductAddGridComponent</value>
+  </data>
+  <data name="general.loading" xml:space="preserve">
+    <value>Yükleniyor...</value>
+  </data>
+  <data name="general.saving" xml:space="preserve">
+    <value>Kaydediliyor...</value>
+  </data>
+  <data name="general.noResults" xml:space="preserve">
+    <value>Ürün bulunamadı</value>
+  </data>
+  <data name="general.staging" xml:space="preserve">
+    <value>Ekli Ürün ({0})</value>
+  </data>
+  
+  <!-- Product Filters -->
+  <data name="filter.allProducts" xml:space="preserve">
+    <value>Tüm Ürünler</value>
+  </data>
+  <data name="filter.availableStock" xml:space="preserve">
+    <value>Kullanılabilir Stok</value>
+  </data>
+  <data name="filter.inStock" xml:space="preserve">
+    <value>Stoktaki Ürünler</value>
+  </data>
+  <data name="filter.software" xml:space="preserve">
+    <value>Yazılım</value>
+  </data>
+  <data name="filter.hardware" xml:space="preserve">
+    <value>Donanım</value>
+  </data>
+  <data name="filter.outlet" xml:space="preserve">
+    <value>Outlet</value>
+  </data>
+  <data name="filter.excludeAdobe" xml:space="preserve">
+    <value>Adobe hariç</value>
+  </data>
+  <data name="filter.apple" xml:space="preserve">
+    <value>Apple</value>
+</data>
+<data name="filter.subFilter.iPad" xml:space="preserve">
+    <value>iPad</value>
+</data>
+<data name="filter.subFilter.iPhone" xml:space="preserve">
+    <value>iPhone</value>
+</data>
+<data name="filter.subFilter.Mac" xml:space="preserve">
+    <value>Mac</value>
+</data>
+<data name="filter.subFilter.placeholder" xml:space="preserve">
+    <value>Tümü</value>
+</data>
+<data name="filter.subFilter.ariaLabel" xml:space="preserve">
+    <value>Alt filtre</value>
+</data>
+<data name="filter.adobe" xml:space="preserve">
+    <value>Adobe</value>
+</data>
+<data name="filter.ariaLabel" xml:space="preserve">
+    <value>Ürün filtresi</value>
+</data>
+
+  
+  <!-- Staging Toggle -->
+  <data name="staging.showStagedOnly" xml:space="preserve">
+    <value>Sadece seçilileri göster</value>
+  </data>
+  <data name="staging.showAllProducts" xml:space="preserve">
+    <value>Tüm ürünleri göster</value>
+  </data>
+  
+  <!-- Tabs -->
+  <data name="tabs.catalogProducts" xml:space="preserve">
+    <value>Ürünler</value>
+  </data>
+  <data name="tabs.writeInProducts" xml:space="preserve">
+    <value>Serbest Ürün Ekleme</value>
+  </data>
+  
+  <!-- Write-In -->
+  <data name="writeIn.emptyGrid" xml:space="preserve">
+    <value>Serbest ürün eklemek için 'Satır Ekle' butonuna tıklayın</value>
+  </data>
+  <data name="col.productDescription" xml:space="preserve">
+    <value>Ürün Açıklaması</value>
+  </data>
+  
+  <!-- Product Requests Tab -->
+  <data name="tabs.productRequests" xml:space="preserve">
+    <value>Ürün Talepleri</value>
+  </data>
+  <data name="col.requestType" xml:space="preserve">
+    <value>Talep Türü</value>
+  </data>
+  <data name="opt.priceRequest" xml:space="preserve">
+    <value>Fiyat Talebi</value>
+  </data>
+  <data name="opt.acquisitionRequest" xml:space="preserve">
+    <value>Satın Alma Talebi</value>
+  </data>
+  <data name="lbl.writeInProducts" xml:space="preserve">
+    <value>Serbest Ürünler</value>
+  </data>
+  <data name="lbl.catalogProducts" xml:space="preserve">
+    <value>Ürünler</value>
+  </data>
+  <data name="productRequest.noCatalogProducts" xml:space="preserve">
+    <value>Talebinize eklemek için ürün arayın</value>
+  </data>
+  <data name="productRequest.stagedCatalogProducts" xml:space="preserve">
+    <value>Talebe Eklenen Ürünler</value>
+  </data>
+  <data name="toast.requestAlreadyExists" xml:space="preserve">
+    <value>Seçili ürünler zaten aktif bir talepte mevcut.</value>
+  </data>
+  <data name="toast.requestCreated" xml:space="preserve">
+    <value>Ürün talebi başarıyla oluşturuldu.</value>
+  </data>
+  <data name="toast.requestUpdated" xml:space="preserve">
+    <value>Ürünler mevcut talebe eklendi.</value>
+  </data>
+  <data name="toast.requestApiError" xml:space="preserve">
+    <value>Uyarı: Ürün talebi oluşturulamadı, ancak ürünler kaydedildi. Lütfen ürün talepleri ayrıca oluşturun.</value>
+  </data>
+  <data name="msg.noProductsFound" xml:space="preserve">
+    <value>Aramanızla eşleşen ürün bulunamadı.</value>
+  </data>
+  <data name="productRequest.searchCatalog" xml:space="preserve">
+    <value>Ürün Ara</value>
+  </data>
+  <data name="productRequest.manualEntry" xml:space="preserve">
+    <value>Serbest Ürün Girişi</value>
+  </data>
+  <data name="col.availableStock" xml:space="preserve">
+    <value>Kullanılabilir Stok</value>
+  </data>
+  <data name="col.centralWarehouseStock" xml:space="preserve">
+    <value>Merkez Depo Stok</value>
+  </data>
+  <data name="col.reservedQuantity" xml:space="preserve">
+    <value>Rezerve Miktar</value>
+  </data>
+  <data name="col.onlineWarehouseStock" xml:space="preserve">
+    <value>Online Sipariş Adedi</value>
+  </data>
+  
+  <!-- Staging Persistence -->
+  <data name="staging.restored" xml:space="preserve">
+    <value>Kaydedilmemiş {0} ürün geri yüklendi</value>
+  </data>
+  <data name="staging.priceRequestRestored" xml:space="preserve">
+    <value>Önceki oturumdan {0} fiyat talebi kalemi geri yüklendi</value>
+  </data>
+  <data name="staging.restoredWithAdjustments" xml:space="preserve">
+    <value>Ürünler geri yüklendi. {0} ürün adedi stok değişikliği nedeniyle azaltıldı.</value>
+  </data>
+  <data name="staging.restoredWithRemovals" xml:space="preserve">
+    <value>Ürünler geri yüklendi. {0} ürün artık mevcut olmadığı için kaldırıldı.</value>
+  </data>
+  <data name="staging.restoredWithBoth" xml:space="preserve">
+    <value>Ürünler geri yüklendi. {0} adet düzeltildi, {1} ürün stok değişikliği nedeniyle kaldırıldı.</value>
+  </data>
+  <data name="staging.allInvalid" xml:space="preserve">
+    <value>Önceki ürünler temizlendi - ürünler artık mevcut değil.</value>
+  </data>
+  
+  <!-- Conditional Fields Panel -->
+  <data name="panel.conditionalFields.title" xml:space="preserve">
+    <value>Ek Bilgi Gerekli</value>
+  </data>
+  <data name="panel.conditionalFields.description" xml:space="preserve">
+    <value>Lütfen bu ürün için aşağıdaki bilgileri girin:</value>
+  </data>
+  <data name="actions.saveAndStage" xml:space="preserve">
+    <value>Kaydet ve Ekle</value>
+  </data>
+  <data name="status.loadingMetadata" xml:space="preserve">
+    <value>Alan bilgileri yükleniyor...</value>
+  </data>
+  <data name="field.existingCustomer" xml:space="preserve">
+    <value>Mevcut Müşteri</value>
+  </data>
+  <data name="field.licenseDuration" xml:space="preserve">
+    <value>Lisans Süresi(gün)</value>
+  </data>
+  <data name="field.projectCode" xml:space="preserve">
+    <value>Proje Kodu</value>
+  </data>
+  <!-- Global Notifications (for JS bridge) -->
+  <data name="notification.savedSuccess" xml:space="preserve">
+    <value>{0} ürün başarıyla kaydedildi.</value>
+  </data>
+  <data name="notification.duplicatesSkipped" xml:space="preserve">
+    <value>{0} ürün bu kayıtta zaten mevcut olduğu için kaydedilmedi.</value>
+  </data>
+  <data name="notification.savedError" xml:space="preserve">
+    <value>Ürünleri kaydederken hata oluştu. {0}</value>
+  </data>
+  <data name="notification.requestSubmitted" xml:space="preserve">
+    <value>Ürün talebi başarıyla gönderildi.</value>
+  </data>
+  <data name="notification.requestApiError" xml:space="preserve">
+    <value>Ürün talebi oluşturuldu ancak Custom API yürütmesi başarısız oldu.</value>
+  </data>
+  <data name="notification.customApiMessage" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+</root>

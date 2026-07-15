@@ -1,0 +1,22 @@
+{
+    "extends": "./node_modules/pcf-scripts/tsconfig_base.json",
+    "compilerOptions": {
+        "typeRoots": ["node_modules/@types"],
+        "types": ["powerapps-component-framework","node"],
+        "resolveJsonModule": true,
+        "moduleResolution": "bundler",
+        "module": "esnext",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "include": [
+        "ProductAddGrid/**/*",
+        "ProductAddGrid/generated/ManifestTypes.d.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "ProductAddGrid/test/**/*.js"
+    ]
+}

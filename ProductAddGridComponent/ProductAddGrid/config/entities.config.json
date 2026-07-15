@@ -1,0 +1,528 @@
+{
+  "entities": [
+    {
+      "parentEntity": "opportunity",
+      "detailEntity": "opportunityproduct",
+      "detailEntitySet": "opportunityproducts",
+      "recordNumberField": "crcad_opportunityid",
+      "defaultView": "Opportunity Custom Grid View",
+      "columns": [
+        {
+          "logicalName": "quantity",
+          "required": true
+        }
+      ],
+      "savedQueryId": "a42dcba1-1f9e-f011-b41c-6045bde08d8d",
+      "isProductDetailView": true,
+      "writeInEnabled": true,
+      "autoStageEnabled": true,
+      "productRequestEnabled": true,
+      "productRequestView": {
+        "catalogView": {
+          "name": "Opportunity Product Request Catalog View",
+          "savedQueryId": "bf19bd16-15dc-f011-8544-7ced8d7735d6",
+          "columns": [
+            {
+              "logicalName": "quantity",
+              "required": true,
+              "editable": true
+            },
+            {
+              "logicalName": "emd_producttype",
+              "editable": true,
+              "required": true
+            },
+            {
+              "logicalName": "description",
+              "editable": true
+            }
+          ]
+        },
+        "writeInView": {
+          "name": "Opportunity Product Request Write-In View",
+          "savedQueryId": "038aa625-14dc-f011-8544-7ced8d7735d6",
+          "columns": [
+            {
+              "logicalName": "productdescription",
+              "required": true,
+              "editable": true,
+              "maxLength": 100
+            },
+            {
+              "logicalName": "quantity",
+              "required": true,
+              "editable": true
+            },
+            {
+              "logicalName": "emd_producttype",
+              "editable": true,
+              "required": true
+            },
+            {
+              "logicalName": "description",
+              "editable": true
+            }
+          ]
+        }
+      },
+      "fieldMappings": {
+        "systemFields": {
+          "parentLookup": {
+            "logicalName": "opportunityid",
+            "navProperty": "opportunityid",
+            "entitySet": "opportunities",
+            "source": "parent"
+          }
+        },
+        "productFieldMappings": [
+          {
+            "fromProductField": "crcad_productcode_ex",
+            "toDetailField": "emd_productcode",
+            "required": true
+          },
+          {
+            "fromProductField": "crcad_product_tax_ex",
+            "toDetailField": "crcad_taxrate"
+          }
+        ]
+      },
+      "writeInView": {
+        "name": "Opportunity Write-In View",
+        "savedQueryId": "87685ebe-b6cb-f011-bbd3-7ced8d7735d6",
+        "columns": [
+          {
+            "logicalName": "productdescription",
+            "required": true,
+            "editable": true,
+            "maxLength": 100
+          },
+          {
+            "logicalName": "priceperunit",
+            "labelKey": "col.unitprice",
+            "readOnly": false,
+            "required": false,
+            "type": "Money",
+            "editable": true
+          },
+          {
+            "logicalName": "quantity",
+            "required": true,
+            "editable": true
+          },
+          {
+            "logicalName": "description",
+            "required": false,
+            "editable": true,
+            "maxLength": 500
+          },
+          {
+            "logicalName": "emd_productcode",
+            "maxLength": 30,
+            "editable": true
+          }
+        ]
+      }
+    },
+    {
+      "parentEntity": "quote",
+      "detailEntity": "quotedetail",
+      "detailEntitySet": "quotedetails",
+      "recordNumberField": "quotenumber",
+      "defaultView": "Quote Custom Grid View",
+      "savedQueryId": "dfbeb872-209e-f011-b41c-002248a3abb0",
+      "isProductDetailView": true,
+      "writeInEnabled": true,
+      "autoStageEnabled": true,
+      "columns": [
+        {
+          "logicalName": "quantity",
+          "required": true
+        }
+      ],
+      "productRequestEnabled": true,
+      "productRequestView": {
+        "catalogView": {
+          "name": "Quote Product Request Catalog View",
+          "savedQueryId": "d9766325-20dc-f011-8544-000d3ab1d5ae",
+          "columns": [
+            {
+              "logicalName": "quantity",
+              "required": true,
+              "editable": true
+            },
+            {
+              "logicalName": "description",
+              "editable": true
+            },
+            {
+              "logicalName": "emd_producttype",
+              "editable": true,
+              "required": true
+            }
+          ]
+        },
+        "writeInView": {
+          "name": "Quote Product Request Write-In View",
+          "savedQueryId": "a563a955-20dc-f011-8544-7ced8d7735d6",
+          "columns": [
+            {
+              "logicalName": "productdescription",
+              "required": true,
+              "editable": true,
+              "maxLength": 100
+            },
+            {
+              "logicalName": "quantity",
+              "required": true,
+              "editable": true
+            },
+            {
+              "logicalName": "description",
+              "editable": true,
+              "maxLength": 500
+            },
+            {
+              "logicalName": "emd_producttype",
+              "editable": true,
+              "required": true
+            }
+          ]
+        }
+      },
+      "fieldMappings": {
+        "systemFields": {
+          "parentLookup": {
+            "logicalName": "quoteid",
+            "navProperty": "quoteid",
+            "entitySet": "quotes",
+            "source": "parent"
+          }
+        },
+        "productFieldMappings": [
+          {
+            "fromProductField": "crcad_productcode_ex",
+            "toDetailField": "crcad_productcode",
+            "required": true
+          },
+          {
+            "fromProductField": "crcad_product_tax_ex",
+            "toDetailField": "crcad_taxrate"
+          }
+        ]
+      },
+      "writeInView": {
+        "name": "Quote Write-In View",
+        "savedQueryId": "0956f506-89cc-f011-bbd3-000d3ab65503",
+        "columns": [
+          {
+            "logicalName": "productdescription",
+            "required": true,
+            "maxLength": 100
+          },
+          {
+            "logicalName": "quantity",
+            "required": true,
+            "editable": true
+          },
+          {
+            "logicalName": "priceperunit",
+            "required": false,
+            "editable": true
+          },
+          {
+            "logicalName": "description",
+            "required": false,
+            "maxLength": 500
+          },
+          {
+            "logicalName": "crcad_produdctcode_ex",
+            "required": false,
+            "maxLength": 30
+          }
+        ]
+      }
+    },
+    {
+      "parentEntity": "salesorder",
+      "detailEntity": "salesorderdetail",
+      "detailEntitySet": "salesorderdetail",
+      "defaultView": "Order Custom Grid View",
+      "savedQueryId": "b0301b93-8ecc-f011-bbd3-000d3ab65503",
+      "isProductDetailView": true,
+      "columns": [
+        {
+          "logicalName": "emd_brand",
+          "exclude": true
+        },
+        {
+          "logicalName": "quantity",
+          "required": true
+        },
+        {
+          "logicalName": "priceperunit",
+          "required": true
+        }
+      ],
+      "writeInEnabled": false,
+      "autoStageEnabled": true,
+      "validateStockBeforeSave": true,
+      "preventDuplicateProducts": true,
+      "disableRowWhenStockZero": true,
+      "limitQuantityToStock": true,
+      "_stockCheckNote": "Runtime override: crcad_deliverytype=9 (Drop Shipping) disables all stock checks via sc=0 flag in parentRecordId",
+      "columnWeights": {
+        "name": 1,
+        "Money": 0.75,
+        "Decimal": 0.75,
+        "OptionSet": 0.75,
+        "default": 1
+      },
+      "conditionalFields": {
+        "use": "adobeLicenseFields",
+        "overrides": {
+          "emd_projectcode": {
+            "required": true
+          }
+        }
+      },
+      "fieldMappings": {
+        "systemFields": {
+          "parentLookup": {
+            "logicalName": "salesorderid",
+            "navProperty": "salesorderid",
+            "entitySet": "salesorders",
+            "source": "parent"
+          }
+        },
+        "productFieldMappings": [
+          {
+            "fromProductField": "crcad_product_tax_ex",
+            "toDetailField": "crcad_taxrate"
+          }
+        ]
+      }
+    },
+    {
+      "parentEntity": "crcad_reservationrecord",
+      "detailEntity": "crcad_reservationproductdetail",
+      "detailEntitySet": "crcad_reservationproductdetail",
+      "defaultView": "Reservation Custom Grid View",
+      "savedQueryId": "6600554e-8fcc-f011-bbd3-0022489d6275",
+      "isProductDetailView": true,
+      "columns": [
+        {
+          "logicalName": "crcad_quantity",
+          "required": true
+        }
+      ],
+      "writeInEnabled": false,
+      "hasCurrency": false,
+      "stockColumns": [
+        "emd_availablestock",
+        "emd_centralwarehousestock",
+        "emd_reservedproductquantity",
+        "emd_onlinewarehousestock"
+      ],
+      "disableRowWhenStockZero": true,
+      "limitQuantityToStock": true,
+      "validateStockBeforeSave": true,
+      "preventDuplicateProducts": true,
+      "autoStageEnabled": true,
+      "hiddenFilter": "excludeAdobe",
+      "columnWeights": {
+        "name": 2,
+        "Money": 1.5,
+        "Decimal": 1,
+        "OptionSet": 1.5,
+        "default": 1
+      },
+      "fieldMappings": {
+        "systemFields": {
+          "parentLookup": {
+            "logicalName": "crcad_reservationrecord",
+            "navProperty": "crcad_ReservationRecord",
+            "entitySet": "crcad_reservationrecords",
+            "source": "parent"
+          },
+          "productLookup": {
+            "logicalName": "emd_product",
+            "navProperty": "emd_Product",
+            "entitySet": "products",
+            "source": "product"
+          },
+          "uomLookup": null,
+          "currencyLookup": null,
+          "staticFields": null,
+          "writeInStaticFields": null
+        },
+        "productFieldMappings": [
+          {
+            "fromProductField": "name",
+            "toDetailField": "crcad_existingproduct",
+            "required": true
+          },
+          {
+            "fromProductField": "crcad_productcode_ex",
+            "toDetailField": "emd_productcode",
+            "required": true
+          }
+        ]
+      }
+    },
+    {
+      "parentEntity": "emd_acquisitionandpricing",
+      "detailEntity": "emd_productdetail",
+      "detailEntitySet": "emd_productdetails",
+      "recordNumberField": "emd_recordid",
+      "autoStageEnabled": true,
+      "fieldMappings": {
+        "systemFields": {
+          "parentLookup": {
+            "logicalName": "emd_acquisitionandpricing",
+            "navProperty": "emd_AcquisitionAndPricing",
+            "entitySet": "emd_acquisitionandpricings",
+            "source": "parent"
+          },
+          "productLookup": {
+            "logicalName": "emd_product",
+            "navProperty": "emd_Product",
+            "entitySet": "products",
+            "source": "product"
+          },
+          "currencyLookup": {
+            "logicalName": "transactioncurrencyid",
+            "entitySet": "transactioncurrencies",
+            "source": "parent-currency"
+          },
+          "uomLookup": null,
+          "staticFields": null,
+          "writeInStaticFields": null
+        },
+        "productFieldMappings": [
+          {
+            "fromProductField": "name",
+            "toDetailField": "emd_existingproduct",
+            "required": true
+          },
+          {
+            "fromProductField": "crcad_productcode_ex",
+            "toDetailField": "emd_productcode",
+            "required": true
+          }
+        ]
+      },
+      "defaultVariant": "priceRequest",
+      "variants": [
+        {
+          "name": "priceRequest",
+          "conditions": [
+            {
+              "value": 0
+            }
+          ],
+          "defaultView": "Price Request Grid View",
+          "savedQueryId": "fb4a65e3-0701-f111-8406-6045bddee5c0",
+          "isProductDetailView": true,
+          "writeInEnabled": true,
+          "productRequestEnabled": false,
+          "stockColumns": [],
+          "fieldConversions": [
+            {
+              "sourceField": "emd_taxrate",
+              "targetField": "crcad_taxrate",
+              "type": "optionSetToDecimal",
+              "mapping": { "0": 0.20, "1": 0.10, "2": 0.01, "3": 0 }
+            }
+          ],
+          "writeInView": {
+            "name": "Price Request Write-In View",
+            "savedQueryId": "f0e87aef-0801-f111-8406-7c1e5234feeb",
+            "columns": [
+              {
+                "logicalName": "emd_existingproduct",
+                "required": true,
+                "editable": true
+              },
+              {
+                "logicalName": "emd_quantity",
+                "required": false,
+                "editable": true
+              },
+              {
+                "logicalName": "emd_price",
+                "labelKey": "col.price",
+                "readOnly": false,
+                "required": false,
+                "type": "Money",
+                "editable": true
+              },
+              {
+                "logicalName": "emd_recommendedprice",
+                "labelKey": "col.recommendedPrice",
+                "readOnly": false,
+                "required": false,
+                "type": "Money",
+                "editable": true
+              },
+              {
+                "logicalName": "emd_description",
+                "required": false,
+                "editable": true
+              }
+            ]
+          }
+        },
+        {
+          "name": "acquisitionOrder",
+          "conditions": [
+            {
+              "value": 2
+            }
+          ],
+          "defaultView": "Acquisition Order Custom Grid View",
+          "savedQueryId": "93ec6f60-ef07-f111-8406-7ced8d42481d",
+          "isProductDetailView": true,
+          "writeInEnabled": false,
+          "productRequestEnabled": false,
+          "stockColumns": [],
+          "hiddenFilter": null,
+          "columnWeights": {
+            "name": 0.75,
+            "Money": 0.85,
+            "Decimal": 0.85,
+            "OptionSet": 1.5,
+            "default": 1
+          },
+          "columns": [
+            {
+              "logicalName": "emd_quantity",
+              "required": true,
+              "editable": true
+            }
+          ],
+          "fieldMappings": {
+            "productFieldMappings": [
+              {
+                "fromProductField": "price",
+                "toDetailField": "emd_price",
+                "required": true
+              }
+            ]
+          },
+          "conditionalFields": {
+            "use": "adobeLicenseFields"
+          },
+          "autoSetRules": [
+            {
+              "sourceField": "price",
+              "matchValue": "*",
+              "targetField": "emd_price",
+              "setValue": "$sourceValue",
+              "overrideValue": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

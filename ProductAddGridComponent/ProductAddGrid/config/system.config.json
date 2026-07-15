@@ -1,0 +1,238 @@
+{
+  "product": {
+    "entity": "product",
+    "codeField": "crcad_productcode_ex",
+    "priorityColumns": ["name", "crcad_productcode_ex"],
+    "stockColumn": "emd_centralwarehousestock",
+    "columns": [
+      "productid",
+      "name",
+      "crcad_productcode_ex",
+      "emd_centralwarehousestock",
+      "emd_availablestock",
+      "emd_brand",
+      "price",
+      "crcad_product_tax_ex"
+    ],
+    "hiddenColumns": ["crcad_productcode_ex","emd_brand","price","crcad_product_tax_ex"]
+  },
+  "defaults": {
+    "uomId": {
+      "production": "2803198f-a18c-477d-bc45-02326a2d65be",
+      "development": "ac75a7bc-0e6c-4d19-b521-2087a8e3586e"
+    },
+    "defaultProductSort": [
+      { "attribute": "emd_usagerank", "descending": true },
+      { "attribute": "name", "descending": false }
+    ],
+    "subFilterDefinitions": {
+      "appleProducts": [
+        {
+          "key": "iPad",
+          "labelKey": "filter.subFilter.iPad",
+          "conditions": [
+            { "attribute": "crcad_productbrandcode_ex", "operator": "eq", "value": "iPad" }
+          ]
+        },
+        {
+          "key": "iPhone",
+          "labelKey": "filter.subFilter.iPhone",
+          "conditions": [
+            { "attribute": "crcad_productbrandcode_ex", "operator": "eq", "value": "iPhone" }
+          ]
+        },
+        {
+          "key": "Mac",
+          "labelKey": "filter.subFilter.Mac",
+          "conditions": [
+            { "attribute": "crcad_productbrandcode_ex", "operator": "in", "values": ["Mac", "Mac CTO"] }
+          ]
+        }
+      ]
+    },
+    "autoSetRules": [
+      {
+        "sourceField": "crcad_product_spec7_ex",
+        "matchValue": "YAZILIM",
+        "targetField": "emd_producttype",
+        "setValue": 1
+      }
+    ],
+    "productFilters": [
+      {
+        "key": "all",
+        "labelKey": "filter.allProducts",
+        "isDefault": true,
+        "conditions": [
+          { "attribute": "crcad_productcode_ex", "operator": "not-null" }
+        ]
+      },
+      {
+        "key": "availableStock",
+        "labelKey": "filter.availableStock",
+        "conditions": [
+          { "attribute": "emd_availablestock", "operator": "gt", "value": 0 }
+        ],
+        "subFilters": "appleProducts"
+      },
+      {
+        "key": "inStock",
+        "labelKey": "filter.inStock",
+        "conditions": [
+          { "attribute": "emd_centralwarehousestock", "operator": "gt", "value": 0 }
+        ],
+        "subFilters": "appleProducts"
+      },
+      {
+        "key": "apple",
+        "labelKey": "filter.apple",
+        "conditions": [
+          { "attribute": "emd_brand", "operator": "eq", "value": 0 }
+        ],
+        "subFilters": "appleProducts"
+      },
+      {
+        "key": "adobe",
+        "labelKey": "filter.adobe",
+        "conditions": [
+          { "attribute": "emd_brand", "operator": "eq", "value": 1 }
+        ]
+      },
+      {
+        "key": "software",
+        "labelKey": "filter.software",
+        "conditions": [
+          { "attribute": "crcad_product_spec7_ex", "operator": "eq", "value": "YAZILIM" }
+        ]
+      },
+      {
+        "key": "hardware",
+        "labelKey": "filter.hardware",
+        "conditions": [
+          { "attribute": "crcad_product_spec7_ex", "operator": "eq", "value": "DONANIM" }
+        ]
+      },
+      {
+        "key": "outlet",
+        "labelKey": "filter.outlet",
+        "conditions": [
+          { "attribute": "crcad_product_spec7_ex", "operator": "eq", "value": "OUTLET" }
+        ]
+      },
+      {
+        "key": "excludeAdobe",
+        "labelKey": "filter.excludeAdobe",
+        "hidden": true,
+        "conditions": [
+          {
+            "type": "or",
+            "conditions": [
+              { "attribute": "emd_brand", "operator": "null" },
+              { "attribute": "emd_brand", "operator": "ne", "value": 1 }
+            ]
+          }
+        ]
+      }
+    ],
+    "systemFieldDefaults": {
+      "productLookup": {
+        "logicalName": "productid",
+        "navProperty": "productid",
+        "entitySet": "products",
+        "source": "product"
+      },
+      "uomLookup": {
+        "logicalName": "uomid",
+        "navProperty": "uomid",
+        "entitySet": "uoms",
+        "source": "config"
+      },
+      "currencyLookup": {
+        "logicalName": "transactioncurrencyid",
+        "entitySet": "transactioncurrencies",
+        "source": "parent-currency"
+      },
+      "staticFields": {
+        "ispriceoverridden": true
+      },
+      "writeInStaticFields": {
+        "isproductoverridden": true
+      }
+    },
+    "defaultStockColumns": ["emd_availablestock"],
+    "availableStockField": "emd_availablestock"
+  },
+  "fieldDefinitions": {
+    "adobeLicenseFields": {
+      "triggerConditions": [
+        { "attribute": "emd_brand", "operator": "eq", "value": 1 }
+      ],
+      "fields": [
+        {
+          "logicalName": "emd_existingcustomer",
+          "labelKey": "field.existingCustomer",
+          "type": "OptionSet",
+          "required": true
+        },
+        {
+          "logicalName": "emd_licenseduration",
+          "labelKey": "field.licenseDuration",
+          "type": "Integer",
+          "required": true
+        },
+        {
+          "logicalName": "emd_projectcode",
+          "labelKey": "field.projectCode",
+          "type": "Text",
+          "required": true
+        }
+      ]
+    }
+  },
+  "productRequest": {
+    "tabVisibilityFlagName": "price_request_tab",
+    "requestTypeColumn": {
+      "logicalName": "requesttype",
+      "labelKey": "col.requestType",
+      "type": "OptionSet",
+      "required": true,
+      "options": [
+        { "value": 0, "labelKey": "opt.priceRequest" },
+        { "value": 1, "labelKey": "opt.acquisitionRequest" }
+      ]
+    },
+    "customApi": {
+      "actionName": "emd_ProductDetailToAcquisitionOrPriceRequest",
+      "existingRequestEntity": "emd_acquisitionandpricing",
+      "productDetailEntity": "emd_productdetail"
+    },
+    "sourceTypeMapping": {
+      "quote": { "filterField": "_emd_quote_value", "recordType": 0 },
+      "opportunity": { "filterField": "_emd_opportunity_value", "recordType": 1 }
+    }
+  },
+  "display": {
+    "formatOverrides": {
+      "quantity": { "decimalPlaces": 0 },
+      "emd_centralwarehousestock": { "decimalPlaces": 0 },
+      "emd_availablestock": { "decimalPlaces": 0 },
+      "emd_reservedproductquantity": { "decimalPlaces": 0 },
+      "emd_onlinewarehousestock": { "decimalPlaces": 0 }
+    },
+    "columnWeights": {
+      "name": 1.5,
+      "Money": 1.5,
+      "Decimal": 1,
+      "OptionSet": 1.5,
+      "default": 1.5
+    }
+  },
+  "search": {
+    "fields": ["crcad_productcode_ex", "name"],
+    "pageSize": 10
+  },
+  "localization": {
+    "resourceType": "resx",
+    "resourceBaseName": "AddProductPCF.Resources"
+  }
+}
