@@ -4,8 +4,15 @@ A configurable PCF (Power Apps Component Framework) control for adding products 
 
 Supporting a new parent entity is a JSON entry, not a code change. The control resolves views, columns, lookups, and field types from Dataverse metadata at runtime.
 
-<!-- TODO: embed the demo video here. Drag the file into a GitHub issue or the release/README editor,
-     then paste the resulting user-images URL. GitHub renders MP4/MOV inline; <=10MB. -->
+## Demo
+
+**Adding products end to end** — catalog search, inline detail editing, staging, and one committed save.
+
+https://github.com/user-attachments/assets/04d68131-4dfd-4e9b-87ea-0bc7d769897c
+
+**Staging survives a reload** — a half-built basket persists to `localStorage`, so refreshing mid-flow doesn't lose the work.
+
+https://github.com/user-attachments/assets/d56cc23b-da7b-4352-b457-cde9f64e8a36
 
 
 ## What it does
