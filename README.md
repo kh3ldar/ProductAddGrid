@@ -10,9 +10,9 @@ Supporting a new parent entity is a JSON entry, not a code change. The control r
 
 https://github.com/user-attachments/assets/04d68131-4dfd-4e9b-87ea-0bc7d769897c
 
-**Staging survives a reload** — a half-built basket persists to `localStorage`, so refreshing mid-flow doesn't lose the work.
+**Conditional fields and staging that survives a reload** — extra fields appear for the products that require them, and a half-built basket persists to `localStorage`, so refreshing mid-flow doesn't lose the work.
 
-https://github.com/user-attachments/assets/d56cc23b-da7b-4352-b457-cde9f64e8a36
+https://github.com/user-attachments/assets/31953683-dd2b-42ec-a6ad-4d86cf18a849
 
 
 ## What it does
